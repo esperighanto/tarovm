@@ -1,0 +1,8 @@
+:IFT
+set gpa 102
+;
+ifgreater 5 2
+scbcall IFT
+dump registers
+dump memory 7
+shutdown

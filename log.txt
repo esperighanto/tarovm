@@ -1,0 +1,66 @@
+abcd 
+----------MEMORY UPLOAD------------
+:SAV was written to memory location 0
+set gpa 101 was written to memory location 1
+dump registers was written to memory location 2
+; was written to memory location 3
+:GBE was written to memory location 4
+set gpb 102 was written to memory location 5
+; was written to memory location 6
+5 was written to memory location 7
+12 was written to memory location 8
+7 was written to memory location 9
+move x2 x3 was written to memory location 10
+call SAV was written to memory location 11
+dump registers was written to memory location 12
+dump memory 10 was written to memory location 13
+shutdown was written to memory location 14
+----------PROGRAM LOG------------
+Running command [:SAV] at sir 0 while inBlock: false
+Running command [set, gpa, 101] at sir 1 while inBlock: true
+Running command [dump, registers] at sir 2 while inBlock: true
+Running command [;] at sir 3 while inBlock: true
+Running command [:GBE] at sir 4 while inBlock: false
+Running command [set, gpb, 102] at sir 5 while inBlock: true
+Running command [;] at sir 6 while inBlock: true
+Running command [5] at sir 7 while inBlock: false
+Running command [12] at sir 8 while inBlock: false
+Running command [7] at sir 9 while inBlock: false
+Running command [move, x2, x3] at sir 10 while inBlock: false
+MOVE DETECTED. MOVING xset gpa 101 to xdump registers
+Running command [call, SAV] at sir 11 while inBlock: false
+CALL SET ALERT
+Calling block SAV at sir 0
+Running command [set, gpa, 101] at sir 1 while inBlock: false
+Running command [set, gpa, 101] at sir 2 while inBlock: false
+Running command [jump, 12] at sir 3 while inBlock: false
+Jumping to an int.
+Running command [dump, registers] at sir 12 while inBlock: false
+---------------------
+Register spc: 0
+Register sac: 0
+Register sir: 12
+Register scb: 0
+Register gpa: 101
+Register gpb: 0
+Register gpc: 0
+Register gpd: 0
+Register gpe: 0
+Register gpf: 0
+Register gpg: 0
+Register gph: 0
+---------------------
+Running command [dump, memory, 10] at sir 13 while inBlock: false
+
+MEMORY DUMP COMMENCING: (Dumping 10 commands)
+MEMORY LINE 1: :SAV
+MEMORY LINE 2: set gpa 101
+MEMORY LINE 3: set gpa 101
+MEMORY LINE 4: jump 12
+MEMORY LINE 5: :GBE
+MEMORY LINE 6: set gpb 102
+MEMORY LINE 7: ;
+MEMORY LINE 8: 5
+MEMORY LINE 9: 12
+MEMORY LINE 10: 7
+Running command [shutdown] at sir 14 while inBlock: false

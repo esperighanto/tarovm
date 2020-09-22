@@ -1,0 +1,15 @@
+:SAV
+set gpa 101
+dump registers
+;
+:GBE
+set gpb 102
+;
+5
+12
+7
+move x2 x3
+call SAV
+dump registers
+dump memory 10
+shutdown

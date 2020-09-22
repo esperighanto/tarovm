@@ -1,0 +1,6 @@
+dump
+set gpa 76
+set gpb 28
+add gpa gpb
+dump
+shutdown
